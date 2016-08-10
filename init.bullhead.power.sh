@@ -131,3 +131,15 @@ get-set-forall /sys/devices/soc.0/qcom,bcl.*/mode enable
 
 # set GPU default power level to 5 (180MHz) instead of 4 (305MHz)
 write /sys/class/kgsl/kgsl-3d0/default_pwrlevel 5
+
+# configure msm_hotplug
+write /sys/module/msm_hotplug/msm_enabled 1
+write /sys/module/msm_hotplug/big_core_up_delay 1500
+write /sys/module/msm_hotplug/down_lock_duration 1000
+write /sys/module/msm_hotplug/fast_lane_load 150
+write /sys/module/msm_hotplug/io_is_busy 0
+write /sys/module/msm_hotplug/max_cpus_online 4
+write /sys/module/msm_hotplug/max_cpus_online_susp 2
+write /sys/module/msm_hotplug/min_cpus_online 2
+write /sys/module/msm_hotplug/offline_load 20
+write /sys/module/msm_hotplug/update_rates 300
